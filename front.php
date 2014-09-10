@@ -7,7 +7,7 @@
 		echo "6";
 		echo $teamName;*/
 		echo "<ul>";
-		foreach ($data->Teams->Team as $currentTeam) :
+		foreach ($injury_data->Teams->Team as $currentTeam) :
 			$teamName = $currentTeam['code'];
 			echo "<li>$teamName</li>";
 		endforeach;
