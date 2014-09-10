@@ -3,12 +3,14 @@
 		$injury_URL = "http://www.fantasyfootballnerd.com/service/injuries/xml/2iacgnksv3vr/1/";
 		$injury_data = simplexml_load_file($injury_URL);
 		//echo "<pre>"; print_r($data); exit; 
-		$teamName = $injury_data->Teams->Team[0]['code'];
+		/*$teamName = $injury_data->Teams->Team[0]['code'];
 		echo "6";
-		echo $teamName;
-		/*foreach ($data->Team as $currentTeam) :
-			$teamName = $currentTeam->code;
+		echo $teamName;*/
+		echo "<ul>";
+		foreach ($data->Teams->Team as $currentTeam) :
+			$teamName = $currentTeam['code'];
 			echo "<li>$teamName</li>";
-		endforeach;*/
+		endforeach;
+		echo "</ul>";
 	?>
 </html>
