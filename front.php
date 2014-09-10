@@ -26,14 +26,15 @@
 		$titles = $dom->getElementsByTagName("a");
 		$count = 0;
 		foreach ($titles as $title){
-			if (preg_match("Fantasy Projection$", $title->getAttribute("title"))) {
+			/*if (preg_match("Fantasy Projection$", $title->getAttribute("title"))) {
 				$count++;
 				if ($title->getAttribute("title") == "A.J. Green Fantasy Projection") {
 					break;
 				}
-			}
+			}*/
+			echo($title->getAttribute("title"));
 		}
-		echo($count);
+		//echo($count);
 		//$output = file_get_contents($url); 
 		//echo $output;
 	?>
