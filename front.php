@@ -23,7 +23,7 @@
 		$website = curl_exec($url);
 		$dom = new DOMDocument();
 		@$dom->loadHTML($website);
-		$title = $dom->getElementById("projection-data");
+		$title = $dom->getElementsByTagName("a");
 		echo "<pre>";
 		print_r($title);
 		//$output = file_get_contents($url); 
