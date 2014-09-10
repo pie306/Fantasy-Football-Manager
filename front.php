@@ -18,14 +18,14 @@
 			echo "</ul></li>";
 		endforeach;
 		echo "</ol>";*/
-		$url = curl_init("https://www.google.com/");
-		curl_exec($url);
-		/*curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
+		$url = curl_init("https://www.youtube.com/");
+		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
 		$website = curl_exec($url);
 		$dom = new DOMDocument();
 		@$dom->loadHTML($website);
-		$title = $dom->getElementById("lga");
-		print_r($title);*/
+		$title = $dom->getElementById("browse-items-primary");
+		echo "<pre>";
+		print_r($title);
 		//$output = file_get_contents($url); 
 		//echo $output;
 	?>
