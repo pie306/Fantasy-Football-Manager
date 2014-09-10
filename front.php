@@ -4,7 +4,7 @@
 		$injury_data = simplexml_load_file($injury_URL);
 		//echo "<pre>"; print_r($data); exit; 
 		echo "<ul>";
-		$teamName = $injury_data->Team[0]['code'];
+		$teamName = $injury_data;
 		echo "<li>$teamName</li>";
 		/*foreach ($data->Team as $currentTeam) :
 			$teamName = $currentTeam->code;
