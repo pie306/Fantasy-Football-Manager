@@ -5,3 +5,5 @@ git add .
 git commit -m "Your Commit Message"
 
 git push heroku master
+
+http://fantasyprepviewer.herokuapp.com/

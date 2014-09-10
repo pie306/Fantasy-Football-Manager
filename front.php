@@ -1,11 +1,7 @@
 <html>
 	<?php
-		$injury_URL = "http://www.fantasyfootballnerd.com/service/injuries/xml/2iacgnksv3vr/1/";
+		/*$injury_URL = "http://www.fantasyfootballnerd.com/service/injuries/xml/2iacgnksv3vr/2/";
 		$injury_data = simplexml_load_file($injury_URL);
-		//echo "<pre>"; print_r($data); exit; 
-		/*$teamName = $injury_data->Teams->Team[0]['code'];
-		echo "6";
-		echo $teamName;*/
 		echo "<ol>";
 		foreach ($injury_data->Teams->Team as $currentTeam) :
 			$teamName = $currentTeam['code'];
@@ -16,11 +12,20 @@
 					$playerPosition = $player['position'];
 					$playerInjury = $player['injury'];
 					$playerNotes = $player['notes'];
-					echo "<li>$playerName $playerPosition $playerInjury $playerNotes</li>";
+					echo "<li>$playerName ($playerPosition), $playerInjury, $playerNotes</li>";
 				}
 			endforeach;
 			echo "</ul></li>";
 		endforeach;
-		echo "</ol>";
+		echo "</ol>";*/
+		$url = curl_init("http://google.com");
+		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
+		$website = curl_exec($url);
+		$dom = new DOMDocument();
+		@$dom->loadHTML($website);
+		$title = $dom->getElementById("lga");
+		print_r($title);
+		//$output = file_get_contents($url); 
+		//echo $output;
 	?>
 </html>
