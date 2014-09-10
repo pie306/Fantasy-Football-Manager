@@ -42,17 +42,11 @@
 		$titles = $dom->getElementsByTagName("a");
 		$count = 0;
 		foreach ($titles as $title) {
-			/*if ($title->getAttribute("fp-player-name")) {
-				count++;
-				echo($count);
+			if ($title->getAttribute("fp-player-name")) {
+				$count++;
 				if ($title->getAttribute("fp-player-name") == "A.J. Green") {
 					break;
 				}
-			}*/
-			if ($title->getAttribute("fp-player-name") == "A.J. Green") {
-				
-			} else {
-				count++;
 			}
 		}
 		echo($count);
