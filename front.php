@@ -6,11 +6,17 @@
 		/*$teamName = $injury_data->Teams->Team[0]['code'];
 		echo "6";
 		echo $teamName;*/
-		echo "<ul>";
+		echo "<ol>";
 		foreach ($injury_data->Teams->Team as $currentTeam) :
 			$teamName = $currentTeam['code'];
-			echo "<li>$teamName</li>";
+			echo "<li>$teamName<ul>";
+			foreach ($currentTeam->Player as $player) :
+				if ($player['gameStatus'] == "Out") {
+					echo "<li>$player</li>";
+				}
+			endforeach;
+			echo "</ul></li>";
 		endforeach;
-		echo "</ul>";
+		echo "</ol>";
 	?>
 </html>
