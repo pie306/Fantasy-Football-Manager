@@ -32,7 +32,7 @@
 					break;
 				}
 			}*/
-			echo($title->getAttribute("title"));
+			echo(preg_match("Fantasy Projection$", $title->getAttribute("title"));
 		}
 		//echo($count);
 		//$output = file_get_contents($url); 
