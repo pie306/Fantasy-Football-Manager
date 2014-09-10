@@ -49,7 +49,9 @@
 					break;
 				}
 			}*/
-			echo($title->getAttribute("fp-player-name"));
+			if ($title->getAttribute("fp-player-name") == "A.J. Green") {
+				echo($title->getAttribute("fp-player-name"));
+			}
 		}
 		echo($count);
 	?>
