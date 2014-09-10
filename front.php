@@ -12,7 +12,11 @@
 			echo "<li>$teamName<ul>";
 			foreach ($currentTeam->Player as $player) :
 				if ($player['gameStatus'] == "Out") {
-					echo "<li>$player</li>";
+					$playerName = $player['playerName'];
+					$playerPosition = $player['position'];
+					$playerInjury = $player['injury'];
+					$playerNotes = $player['notes'];
+					echo "<li>$playerName $playerPosition $playerInjury $playerNotes</li>";
 				}
 			endforeach;
 			echo "</ul></li>";
