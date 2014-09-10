@@ -18,12 +18,12 @@
 			echo "</ul></li>";
 		endforeach;
 		echo "</ol>";*/
-		$url = curl_init("https://www.youtube.com/");
+		$url = curl_init("http://www.numberfire.com/nfl/fantasy/fantasy-football-projections/wr");
 		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
 		$website = curl_exec($url);
 		$dom = new DOMDocument();
 		@$dom->loadHTML($website);
-		$title = $dom->getElementById("browse-items-primary");
+		$title = $dom->getElementById("projection-data");
 		echo "<pre>";
 		print_r($title);
 		//$output = file_get_contents($url); 
