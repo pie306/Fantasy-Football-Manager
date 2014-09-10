@@ -18,7 +18,7 @@
 			echo "</ul></li>";
 		endforeach;
 		echo "</ol>";*/
-		$url = curl_init("http://www.numberfire.com/nfl/fantasy/fantasy-football-projections/wr");
+		/*$url = curl_init("http://www.numberfire.com/nfl/fantasy/fantasy-football-projections/wr");
 		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
 		$website = curl_exec($url);
 		$dom = new DOMDocument();
@@ -33,8 +33,22 @@
 				}
 			}
 		}
+		echo($count);*/
+		$url = curl_init("http://www.fantasypros.com/nfl/rankings/wr.php#");
+		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
+		$website = curl_exec($url);
+		$dom = new DOMDocument();
+		@$dom->loadHTML($website);
+		$titles = $dom->getElementsByTagName("a");
+		$count = 0;
+		foreach ($titles as $title) {
+			if ($title->getAttribute("fp-player-name") != "") {
+				count++;
+				if ($title->getAttribute("fp-player-name") == "A.J. Green") {
+					break;
+				}
+			}
+		}
 		echo($count);
-		//$output = file_get_contents($url); 
-		//echo $output;
 	?>
 </html>
