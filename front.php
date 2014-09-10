@@ -5,10 +5,12 @@
 		$data = simplexml_load_string($injury_data);
 		//echo "<pre>"; print_r($data); exit; 
 		echo "<ul>";
-		foreach ($data->Team as $currentTeam) :
+		$teamName = $data->Team[0]->code;
+		echo "<li>$teamName</li>";
+		/*foreach ($data->Team as $currentTeam) :
 			$teamName = $currentTeam->code;
 			echo "<li>$teamName</li>";
-		endforeach;
+		endforeach;*/
 		echo "</ul>";
 	?>
 </html>
