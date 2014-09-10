@@ -1,5 +1,1 @@
-<html>
-
-<p>hi</p>
-
-</html>
+<?php include_once("index.html") ?>
