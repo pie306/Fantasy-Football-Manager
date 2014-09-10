@@ -2,7 +2,6 @@
 	<?php
 		$injury_URL = "http://www.fantasyfootballnerd.com/service/injuries/xml/2iacgnksv3vr/1/";
 		$injury_data = simplexml_load_file($injury_URL);
-		var_dump($injury_data);
 		//echo "<pre>"; print_r($data); exit; 
 		echo "<ul>";
 		$teamName = $injury_data->Team[0]['code'];
