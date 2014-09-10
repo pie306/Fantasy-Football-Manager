@@ -1,0 +1,7 @@
+cd to C:/Users/Franklin/Documents/Projects/Fantasy Site
+
+git add .
+
+git commit -m "Your Commit Message"
+
+git push heroku master
