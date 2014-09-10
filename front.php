@@ -50,7 +50,9 @@
 				}
 			}*/
 			if ($title->getAttribute("fp-player-name") == "A.J. Green") {
-				echo($title->getAttribute("fp-player-name"));
+				
+			} else {
+				count++;
 			}
 		}
 		echo($count);
