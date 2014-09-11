@@ -51,7 +51,7 @@
 		}
 		echo($count);*/
 		$weekNumber = 2;
-		$url = curl_init("http://espn.go.com/fantasy/football/story/_/page/14ranksWeek . $weekNumber . QB/fantasy-football-week- . $weekNumber . -fantasy-football-quarterback-rankings");
+		$url = curl_init("http://espn.go.com/fantasy/football/story/_/page/14ranksWeek" . $weekNumber . "QB/fantasy-football-week-" . $weekNumber . "-fantasy-football-quarterback-rankings");
 		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
 		$website = curl_exec($url);
 		$dom = new DOMDocument();
