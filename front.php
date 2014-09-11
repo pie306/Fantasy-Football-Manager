@@ -34,7 +34,7 @@
 			}
 		}
 		echo($count);*/
-		$url = curl_init("http://www.fantasypros.com/nfl/rankings/wr.php#");
+		/*$url = curl_init("http://www.fantasypros.com/nfl/rankings/wr.php#");
 		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
 		$website = curl_exec($url);
 		$dom = new DOMDocument();
@@ -48,6 +48,23 @@
 					break;
 				}
 			}
+		}
+		echo($count);*/
+		$url = curl_init("http://espn.go.com/fantasy/football/story/_/page/14ranksWeek2WR/fantasy-football-week-2-fantasy-football-wide-receiver-rankings");
+		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
+		$website = curl_exec($url);
+		$dom = new DOMDocument();
+		@$dom->loadHTML($website);
+		$titles = $dom->getElementsByTagName("a");
+		$count = 0;
+		foreach ($titles as $title) {
+			/*if ($title->getAttribute("playeridtype") == "sportsId") {
+				$count++;
+				if ($title->textContent == "A.J. Green") {
+					break;
+				}
+			}*/
+			echo($title->textContent);
 		}
 		echo($count);
 	?>
