@@ -21,6 +21,7 @@
 		endforeach;
 		echo "</ol>";*/
 		$originalURL = "http://www.numberfire.com/nfl/fantasy/fantasy-football-projections/" . $position;
+		echo $originalURL;
 		$url = curl_init($originalURL);
 		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
 		$website = curl_exec($url);
