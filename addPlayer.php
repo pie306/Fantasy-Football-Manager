@@ -2,6 +2,7 @@
 		$weekNumber = 2;
 		$position = $_POST['position'];
 		$name = $_POST['playerName'];
+		echo($name . ": ");
 		/*$injury_URL = "http://www.fantasyfootballnerd.com/service/injuries/xml/2iacgnksv3vr/2/";
 		$injury_data = simplexml_load_file($injury_URL);
 		echo "<ol>";
@@ -21,7 +22,6 @@
 		endforeach;
 		echo "</ol>";*/
 		$originalURL = "http://www.numberfire.com/nfl/fantasy/fantasy-football-projections/" . $position;
-		echo $originalURL;
 		$url = curl_init($originalURL);
 		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
 		$website = curl_exec($url);
@@ -37,8 +37,8 @@
 				}
 			}
 		}
-		echo($count);
-		/*$url = curl_init("http://www.fantasypros.com/nfl/rankings/wr.php#");
+		echo($count . " ");
+		$url = curl_init("http://www.fantasypros.com/nfl/rankings/" . $position .".php#");
 		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
 		$website = curl_exec($url);
 		$dom = new DOMDocument();
@@ -48,12 +48,12 @@
 		foreach ($titles as $title) {
 			if ($title->getAttribute("fp-player-name")) {
 				$count++;
-				if ($title->getAttribute("fp-player-name") == "A.J. Green") {
+				if ($title->getAttribute("fp-player-name") == $name) {
 					break;
 				}
 			}
 		}
-		echo($count);*/
+		echo($count);
 		/*
 		$url = curl_init("http://espn.go.com/fantasy/football/story/_/page/14ranksWeek" . $weekNumber . "QB/fantasy-football-week-" . $weekNumber . "-fantasy-football-quarterback-rankings");
 		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
