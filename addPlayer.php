@@ -51,12 +51,11 @@
 			}
 		}
 		echo($count . " ");
-		if ($position = "d") {
+		if ($position == "d") {
 			$position = "dst"; 
 		}
 		$url = curl_init("http://www.fantasypros.com/nfl/rankings/" . $position .".php#");
-		curl_exec($url);
-		/*curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
 		$website = curl_exec($url);
 		$dom = new DOMDocument();
 		@$dom->loadHTML($website);
@@ -70,7 +69,7 @@
 				}
 			}
 		}
-		echo($count);*/
+		echo($count);
 		$url = curl_init($espnURL);
 		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
 		$website = curl_exec($url);
