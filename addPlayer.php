@@ -69,7 +69,7 @@
 				}
 			}
 		}
-		echo($count);
+		echo($count . " ");
 		$url = curl_init($espnURL);
 		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
 		$website = curl_exec($url);
