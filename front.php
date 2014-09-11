@@ -58,12 +58,13 @@
 		$titles = $dom->getElementsByTagName("a");
 		$count = 0;
 		foreach ($titles as $title) {
-			if ($title->getAttribute("class") == "flexpop") {
+			echo($title->getAttribute("class"));
+			/*if ($title->getAttribute("class") == "flexpop") {
 				$count++;
 				if ($title->textContent == "A.J. Green") {
 					break;
 				}
-			}
+			}*/
 		}
 		echo($count);
 	?>
