@@ -20,9 +20,9 @@
 			echo "</ul></li>";
 		endforeach;
 		echo "</ol>";*/
-		$url = curl_init("http://www.numberfire.com/nfl/fantasy/fantasy-football-projections/" . $position);
-		curl_exec($url);
-		/*curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
+		$originalURL = "http://www.numberfire.com/nfl/fantasy/fantasy-football-projections/" . $position;
+		$url = curl_init($originalURL);
+		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
 		$website = curl_exec($url);
 		$dom = new DOMDocument();
 		@$dom->loadHTML($website);
