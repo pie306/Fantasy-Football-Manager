@@ -58,7 +58,8 @@
 		$titles = $dom->getElementsByTagName("a");
 		$count = 0;
 		foreach ($titles as $title) {
-			echo($title['playerid']);
+			echo "<pre>";
+			printr($title);
 			/*if ($title->getAttribute("class") == "flexpop") {
 				$count++;
 				if ($title->textContent == "A.J. Green") {
