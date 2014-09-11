@@ -56,16 +56,17 @@
 		$dom = new DOMDocument();
 		@$dom->loadHTML($website);
 		$titles = $dom->getElementsByTagName("a");
+		$started = false;
 		$count = 0;
 		foreach ($titles as $title) {
-			echo "<pre>";
-			print_r($title);
-			/*if ($title->getAttribute("class") == "flexpop") {
+			if (preg_match("/Week 2$/", $title->textContent)) {
+				$started = true;
+			} else if ($started == true) {
 				$count++;
 				if ($title->textContent == "A.J. Green") {
 					break;
 				}
-			}*/
+			}
 		}
 		echo($count);
 	?>
