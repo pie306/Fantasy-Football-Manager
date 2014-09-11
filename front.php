@@ -50,7 +50,7 @@
 			}
 		}
 		echo($count);*/
-		$url = curl_init("http://espn.go.com/fantasy/football/story/_/page/14ranksWeek2WR/fantasy-football-week-2-fantasy-football-wide-receiver-rankings");
+		$url = curl_init("http://espn.go.com/fantasy/football/story/_/page/14ranksWeek2QB/fantasy-football-week-2-fantasy-football-quarterback-rankings");
 		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
 		$website = curl_exec($url);
 		$dom = new DOMDocument();
@@ -63,7 +63,7 @@
 				$started = true;
 			} else if ($started == true) {
 				$count++;
-				if ($title->textContent == "A.J. Green") {
+				if ($title->textContent == "Andrew Luck") {
 					break;
 				}
 			}
