@@ -59,7 +59,7 @@
 		$count = 0;
 		foreach ($titles as $title) {
 			echo "<pre>";
-			printr($title);
+			print_r($title);
 			/*if ($title->getAttribute("class") == "flexpop") {
 				$count++;
 				if ($title->textContent == "A.J. Green") {
