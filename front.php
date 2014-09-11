@@ -58,7 +58,7 @@
 		$titles = $dom->getElementsByTagName("a");
 		$count = 0;
 		foreach ($titles as $title) {
-			if ($title->getAttribute("playeridtype") == "sportsId") {
+			if ($title->getAttribute("class") == "flexpop") {
 				$count++;
 				if ($title->textContent == "A.J. Green") {
 					break;
