@@ -1,12 +1,17 @@
 <html>
 	<select name="position">
-		<option value="">Select...</option>
+		<option value="">Position</option>
 		<option value="QB">QuarterBack</option>
 		<option value="RB">RunningBack</option>
+		<option value="WR">Wide Receiver</option>
+		<option value="TE">Tight End</option>
+		<option value="K">Kicker</option>
+		<option value="Def">Defense</option>
 	</select>
 	<?php
 		$weekNumber = 2;
-		
+		$position = $_POST['position'];
+		echo($position);
 		/*$injury_URL = "http://www.fantasyfootballnerd.com/service/injuries/xml/2iacgnksv3vr/2/";
 		$injury_data = simplexml_load_file($injury_URL);
 		echo "<ol>";
