@@ -63,7 +63,7 @@
 				$started = true;
 			} else if ($started == true) {
 				$count++;
-				if ($title->textContent == "Andrew Luck") {
+				if ($title->textContent == "Matt Cassel") {
 					break;
 				}
 			}
