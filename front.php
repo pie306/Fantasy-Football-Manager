@@ -1,5 +1,11 @@
 <html>
 	<?php
+		$weekNumber = 2;
+		echo "<select name="position">
+				<option value="">Select...</option>
+				<option value="QB">QuarterBack</option>
+				<option value="RB">RunningBack</option>
+			  </select>";
 		/*$injury_URL = "http://www.fantasyfootballnerd.com/service/injuries/xml/2iacgnksv3vr/2/";
 		$injury_data = simplexml_load_file($injury_URL);
 		echo "<ol>";
@@ -50,7 +56,7 @@
 			}
 		}
 		echo($count);*/
-		$weekNumber = 2;
+		/*
 		$url = curl_init("http://espn.go.com/fantasy/football/story/_/page/14ranksWeek" . $weekNumber . "QB/fantasy-football-week-" . $weekNumber . "-fantasy-football-quarterback-rankings");
 		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
 		$website = curl_exec($url);
@@ -70,6 +76,6 @@
 			}
 		}
 		echo($count);
-		
+		*/
 	?>
 </html>
