@@ -3,6 +3,19 @@
 		$position = $_POST['position'];
 		$name = $_POST['playerName'];
 		echo($name . ": ");
+		if ($position == "qb") {
+			$espnURL = "http://espn.go.com/fantasy/football/story/_/page/14ranksWeek" . $weekNumber . "QB/fantasy-football-week-" . $weekNumber . "-fantasy-football-quarterback-rankings";
+		} else if ($position == "rb") {
+			$espnURL = "http://espn.go.com/fantasy/football/story/_/page/14ranksWeek" . $weekNumber . "RB/fantasy-football-week-" . $weekNumber . "-fantasy-football-running-back-rankings";
+		} else if ($position == "wr") {
+			$espnURL = "http://espn.go.com/fantasy/football/story/_/page/14ranksWeek" . $weekNumber . "WR/fantasy-football-week-" . $weekNumber . "-fantasy-football-wide-receiver-rankings";
+		} else if ($position == "te") {
+			$espnURL = "http://espn.go.com/fantasy/football/story/_/page/14ranksWeek" . $weekNumber . "TE/fantasy-football-week-" . $weekNumber . "-fantasy-football-tight-end-rankings";
+		} else if ($position == "k") {
+			$espnURL = "http://espn.go.com/fantasy/football/story/_/page/14ranksWeek" . $weekNumber . "K/fantasy-football-week-" . $weekNumber . "-fantasy-football-kicker-rankings";
+		} else if ($position == "d") {
+			$espnURL = "http://espn.go.com/fantasy/football/story/_/page/14ranksWeek" . $weekNumber . "DST/fantasy-football-week-" . $weekNumber . "-fantasy-football-defense-special-teams-rankings";
+		}
 		/*$injury_URL = "http://www.fantasyfootballnerd.com/service/injuries/xml/2iacgnksv3vr/2/";
 		$injury_data = simplexml_load_file($injury_URL);
 		echo "<ol>";
@@ -38,7 +51,10 @@
 			}
 		}
 		echo($count . " ");
-		$url = curl_init("http://www.fantasypros.com/nfl/rankings/" . $position .".php#");
+		if ($position = "d") {
+			$position = "dst"; 
+		}
+		$url = curl_init("http://www.fantasypros.com/nfl/rankings/" . $position .".php?league=110352");
 		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
 		$website = curl_exec($url);
 		$dom = new DOMDocument();
@@ -53,9 +69,8 @@
 				}
 			}
 		}
-		echo($count);
-		/*
-		$url = curl_init("http://espn.go.com/fantasy/football/story/_/page/14ranksWeek" . $weekNumber . "QB/fantasy-football-week-" . $weekNumber . "-fantasy-football-quarterback-rankings");
+		echo($count . " ");
+		$url = curl_init();
 		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
 		$website = curl_exec($url);
 		$dom = new DOMDocument();
@@ -68,11 +83,10 @@
 				$started = true;
 			} else if ($started == true) {
 				$count++;
-				if ($title->textContent == "Matt Cassel") {
+				if ($title->textContent == $name) {
 					break;
 				}
 			}
 		}
 		echo($count);
-		*/
 	?>
