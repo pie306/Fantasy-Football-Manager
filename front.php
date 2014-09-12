@@ -1,5 +1,5 @@
 <html>
-	<form action="addPlayer.php" method="POST">
+	<!--<form action="addPlayer.php" method="POST">
 		<select name="position">
 			<option value="">Position</option>
 			<option value="qb">QuarterBack</option>
@@ -14,5 +14,8 @@
 		<br>
 		<button type="submit">Add Player</button>
 		<br>
-	</form>
+	</form>-->
+	<?php 
+		phpinfo();
+	?>
 </html>
