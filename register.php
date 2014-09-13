@@ -17,7 +17,7 @@
 					echo "<h1>Error</h1>";
 					echo "<p>Sorry, that username is taken. Please go back and try again.</p>";
 				} else {
-					$registerquery = mysqli_query("INSERT INTO users (Username, Password) VALUES('".$username."', '".$password."')");
+					$registerquery = mysqli_query("INSERT INTO users (Username, Password) VALUES('$username', '$password')");
 					if($registerquery) {
 						echo "<h1>Success</h1>";
 						echo "<p>Your account was successfully created. Please <a href=\"index.php\">click here to login</a>.</p>";

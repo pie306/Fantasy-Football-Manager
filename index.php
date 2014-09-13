@@ -29,15 +29,15 @@
 					echo "<br>";
 					echo $password;
 					*/
-					$registerquery = mysqli_query("INSERT INTO users (Username, Password) VALUES('".$username."', '".$password."')");
+					//$registerquery = mysqli_query("INSERT INTO users (Username, Password) VALUES('$username', '$password')");
 					//echo $registerquery;
-					if ($registerquery == true) {
+					/*if ($registerquery == true) {
 						echo "success";
 					} else {
 						echo "failure"
 					}
-					
-					/*$checklogin = mysqli_query("SELECT * FROM users WHERE Username = '".$username."' AND Password = '".$password."'");
+					*/
+					$checklogin = mysqli_query("SELECT * FROM users WHERE Username = '".$username."' AND Password = '".$password."'");
 					if(mysqli_num_rows($checklogin) == 1) {
 						$row = mysqli_fetch_array($checklogin);
 						$_SESSION['Username'] = $username;
@@ -48,7 +48,7 @@
 					} else {
 						echo "<h1>Error</h1>";
 						echo "<p>Sorry, your account could not be found. Please <a href=\"index.php\">click here to try again</a>.</p>";
-					}*/
+					}
 				} else {
 			?>
 					<h1>Account Login</h1>
