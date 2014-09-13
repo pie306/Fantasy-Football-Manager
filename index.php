@@ -30,7 +30,7 @@
 					echo $password;
 					*/
 					$registerquery = mysqli_query("INSERT INTO users (Username, Password) VALUES('".$username."', '".$password."')");
-					echo $registerquery;
+					//echo $registerquery;
 					if ($registerquery == true) {
 						echo "success";
 					} else {
