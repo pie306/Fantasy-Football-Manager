@@ -18,7 +18,9 @@
 				} elseif(!empty($_POST['username']) && !empty($_POST['password'])) {
 					$username = mysqli_real_escape_string($_POST['username']);
 					$password = md5(mysqli_real_escape_string($_POST['password']));
-					$checklogin = mysqli_query("SELECT * FROM users WHERE Username = '".$username."' AND Password = '".$password."'");
+					echo $username;
+					echo $password;
+					/*$checklogin = mysqli_query("SELECT * FROM users WHERE Username = '".$username."' AND Password = '".$password."'");
 					if(mysqli_num_rows($checklogin) == 1) {
 						$row = mysqli_fetch_array($checklogin);
 						$_SESSION['Username'] = $username;
@@ -29,7 +31,7 @@
 					} else {
 						echo "<h1>Error</h1>";
 						echo "<p>Sorry, your account could not be found. Please <a href=\"index.php\">click here to try again</a>.</p>";
-					}
+					}*/
 				} else {
 			?>
 					<h1>Account Login</h1>
