@@ -19,7 +19,7 @@
 				} else {
 					$registerquery = mysqli_query("INSERT INTO users (Username, Password) VALUES(`$username`, `$password`)");
 					echo $registerquery;
-					if($registerquery == true) {
+					if($registerquery == false) {
 						echo "<h1>Success</h1>";
 						echo "<p>Your account was successfully created. Please <a href=\"index.php\">click here to login</a>.</p>";
 					} else {
