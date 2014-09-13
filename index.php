@@ -17,13 +17,13 @@
 			<?php
 				} elseif(!empty($_POST['username']) && !empty($_POST['password'])) {
 					$username = mysqli_real_escape_string($_POST['username']);
-					$password = mysqli_real_escape_string($_POST['password']);
+					$password = md5(mysqli_real_escape_string($_POST['password']));
 					
 					echo $username;
 					echo "<br>";
 					echo $password;
 					echo "<br>";
-					$username = mysqli_real_escape_string($_POST['username']);
+					$username = md5(mysqli_real_escape_string($_POST['username']));
 					$password = md5(mysqli_real_escape_string($_POST['password']));
 					echo $username;
 					echo "<br>";
