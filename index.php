@@ -28,7 +28,7 @@
 					echo $username;
 					echo "<br>";
 					echo $password;
-					*/
+					
 					$registerquery = mysqli_query("INSERT INTO users (Username, Password) VALUES('".$username."', '".$password."')");
 					//echo $registerquery;
 					if ($registerquery == true) {
