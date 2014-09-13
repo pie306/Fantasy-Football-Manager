@@ -11,13 +11,14 @@
 			<?php
 			if(!empty($_POST['username']) && !empty($_POST['password'])) {
 				$username = mysqli_real_escape_string($_POST['username']);
+				echo($username);
 				$password = md5(mysqli_real_escape_string($_POST['password']));     
 				$checkusername = mysqli_query("SELECT * FROM users WHERE Username = '".$username."'");      
 				if(mysqli_num_rows($checkusername) == 1) {
 					echo "<h1>Error</h1>";
 					echo "<p>Sorry, that username is taken. Please go back and try again.</p>";
 				} else {
-					$registerquery = mysqli_query("INSERT INTO users (Username, Password) VALUES('pie', 'tree')");
+					$registerquery = mysqli_query("INSERT INTO users (Username, Password) VALUES('".$username."', '".$password."')");
 					if($registerquery) {
 						echo "<h1>Success</h1>";
 						echo "<p>Your account was successfully created. Please <a href=\"index.php\">click here to login</a>.</p>";
