@@ -9,8 +9,7 @@
 		<div id="main">
 			<?php
 				include "base.php";
-				echo("worked");
-				/*if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])) {
+				if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])) {
 			?>
 					<h1>Login</h1>
 					<p>Thanks for logging in! Hello <code><?=$_SESSION['Username']?></code>.</p>
@@ -18,11 +17,11 @@
 			<?php
 				}
 				elseif(!empty($_POST['username']) && !empty($_POST['password'])) {
-					$username = mysql_real_escape_string($_POST['username']);
-					$password = md5(mysql_real_escape_string($_POST['password']));
-					$checklogin = mysql_query("SELECT * FROM users WHERE Username = '".$username."' AND Password = '".$password."'");
-					if(mysql_num_rows($checklogin) == 1) {
-						$row = mysql_fetch_array($checklogin);
+					$username = mysqli_real_escape_string($_POST['username']);
+					$password = md5(mysqli_real_escape_string($_POST['password']));
+					$checklogin = mysqli_query("SELECT * FROM users WHERE Username = '".$username."' AND Password = '".$password."'");
+					if(mysqli_num_rows($checklogin) == 1) {
+						$row = mysqli_fetch_array($checklogin);
 						$_SESSION['Username'] = $username;
 						$_SESSION['LoggedIn'] = 1;
 						echo "<h1>Success</h1>";
@@ -45,7 +44,7 @@
 						</fieldset>
 					</form>
 			<?php
-				}*/
+				}
 			?>
 		</div>
 	</body>
