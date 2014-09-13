@@ -9,7 +9,8 @@
 		<div id="main">
 			<?php
 				include "base.php";
-				if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])) {
+				echo("worked");
+				/*if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])) {
 			?>
 					<h1>Login</h1>
 					<p>Thanks for logging in! Hello <code><?=$_SESSION['Username']?></code>.</p>
@@ -44,7 +45,7 @@
 						</fieldset>
 					</form>
 			<?php
-				}
+				}*/
 			?>
 		</div>
 	</body>
