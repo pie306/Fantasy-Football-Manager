@@ -9,15 +9,14 @@
 		<div id="main">
 			<?php
 				phpinfo();
-				/*include "base.php";
+				include "base.php";
 				if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])) {
 			?>
 					<h1>Login</h1>
 					<p>Thanks for logging in! Hello <code><?=$_SESSION['Username']?></code>.</p>
 		  
 			<?php
-				}
-				elseif(!empty($_POST['username']) && !empty($_POST['password'])) {
+				} elseif(!empty($_POST['username']) && !empty($_POST['password'])) {
 					$username = mysqli_real_escape_string($_POST['username']);
 					$password = md5(mysqli_real_escape_string($_POST['password']));
 					$checklogin = mysqli_query("SELECT * FROM users WHERE Username = '".$username."' AND Password = '".$password."'");
@@ -32,8 +31,7 @@
 						echo "<h1>Error</h1>";
 						echo "<p>Sorry, your account could not be found. Please <a href=\"index.php\">click here to try again</a>.</p>";
 					}
-				}
-				else {
+				} else {
 			?>
 					<h1>Account Login</h1>
 					<p>Login below, or <a href="register.php">click here to register</a>.</p>
