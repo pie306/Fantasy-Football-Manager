@@ -17,7 +17,8 @@ a:hover, a:active, a:visited {
     margin-top: 50px;
     padding: 10px;
     border: 1px solid #CCC;
-    background-image: url("img_tree.gif"),
+    background-image: url("football.jpg");
+	opacity: 0.6;
 }
 form fieldset { border: 0; }
 form fieldset p br { clear: left; }
