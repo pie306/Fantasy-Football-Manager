@@ -7,7 +7,7 @@
 	$dbpass = "ab827e68"; // the password that you created, or were given, to access your database
 	 
 	$success = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);// or die("MySQL Error: " . mysqli_error());
-	echo ($success);
+	//echo ($success);
 	//mysql_select_db($dbname);// or die("MySQL Error: " . mysql_error());
 	//DATABASE_URL:         mysql://b73bf768820bf5:ab827e68@us-cdbr-iron-east-01.cleardb.net/heroku_3459d78c3442ad9?reconnect=true
 	
