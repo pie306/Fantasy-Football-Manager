@@ -8,7 +8,8 @@
 	<body>  
 		<div id="main">
 			<?php
-				include "base.php";
+				phpinfo();
+				/*include "base.php";
 				if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])) {
 			?>
 					<h1>Login</h1>
