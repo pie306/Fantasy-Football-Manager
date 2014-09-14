@@ -9,11 +9,12 @@
 		$team = mysqli_fetch_row($result);
 		for ($i = 1; $i < 17; $i++) {
 			if ($i == NULL) {
-				break;
+				echo '<script language="javascript">';
+				echo 'alert("message successfully sent")';
+				echo '</script>';
 			}
 		}
 		if ($i != 17) {
-			$_SESSION['i'] = $i;
 			//$playerNum = "Player" . $i;
 			//mysqli_query($success, "SET SQL_SAFE_UPDATES=0");
 			//mysqli_query($success, "UPDATE players SET $playerNum = '$playerName' WHERE Username = '$user'");
