@@ -3,7 +3,8 @@
 		$playerName = mysqli_real_escape_string($success, $_POST['playerName']);
 		$position = mysqli_real_escape_string($success, $_POST['position']);
 		$user = mysqli_real_escape_string($success, $_SESSION['Username']);
-		mysqli_query($success, "INSERT INTO players (Player1) VALUES('$playerName') WHERE Username = '$user'");
+		mysqli_query($success, "SET SQL_SAFE_UPDATES=0");
+		mysqli_query($success, "UPDATE players SET Player1 = '$playerName' WHERE Username = '$user'");
 		/*$weekNumber = 2;
 		$position = $_POST['position'];
 		$name = $_POST['playerName'];
