@@ -1,5 +1,10 @@
 <?php
-		$weekNumber = 2;
+		include "base.php";
+		$playerName = $_POST['playerName'];
+		$position = $_POST['position'];
+		$user = $_SESSION['Username'];
+		mysqli_query($success, "INSERT INTO players (Player1) VALUES('$playerName') WHERE Username = '$user'");
+		/*$weekNumber = 2;
 		$position = $_POST['position'];
 		$name = $_POST['playerName'];
 		echo($name . ": ");
@@ -34,7 +39,7 @@
 			echo "</ul></li>";
 		endforeach;
 		echo "</ol>";*/
-		$originalURL = "http://www.numberfire.com/nfl/fantasy/fantasy-football-projections/" . $position;
+		/*$originalURL = "http://www.numberfire.com/nfl/fantasy/fantasy-football-projections/" . $position;
 		$url = curl_init($originalURL);
 		curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
 		$website = curl_exec($url);

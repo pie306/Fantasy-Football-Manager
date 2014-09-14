@@ -13,6 +13,13 @@
 			?>
 					<h1>Login</h1>
 					<p>Thanks for logging in! Hello <code><?=$_SESSION['Username']?></code>.</p>
+					<form method="post" action="addPlayer.php" name="loginform" id="loginform">
+						<fieldset>
+							<label for="playerName">Player Name:</label><input type="text" name="playerName" id="playerName" /><br />
+							<label for="position">Position (qb, rb, wr, te, k, d):</label><input type="text" name="position" id="position" /><br />
+							<input type="submit" name="add" id="add" value="Add" />
+						</fieldset>
+					</form>
 					<form method="post" action="logout.php" name="logoutform" id="logoutform">
 						<fieldset>
 							<input type="submit" name="logout" id="logout" value="Logout" />
