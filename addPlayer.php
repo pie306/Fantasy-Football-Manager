@@ -1,6 +1,6 @@
 <?php
 		include "base.php";
-		$playerName = mysqli_real_escape_string($success, $_POST['playerName']);
+		/*$playerName = mysqli_real_escape_string($success, $_POST['playerName']);
 		$position = mysqli_real_escape_string($success, $_POST['position']);
 		$user = mysqli_real_escape_string($success, $_SESSION['Username']);
 		$teamSearch = "SELECT * FROM players WHERE Username = '$user'";
@@ -12,13 +12,12 @@
 				break;
 			}
 		}
-		echo ($i);
 		if ($i != 17) {
 			$playerNum = "Player" . $i;
 			mysqli_query($success, "SET SQL_SAFE_UPDATES=0");
 			mysqli_query($success, "UPDATE players SET $playerNum = '$playerName' WHERE Username = '$user'");
 			mysqli_query($success, "INSERT INTO positions (Username, Player, Position) VALUES('$usern', '$playerName', '$position')");
-		}
+		}*/
 		header('index.php');
 		
 		/*$weekNumber = 2;
