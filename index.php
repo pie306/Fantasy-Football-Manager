@@ -13,6 +13,12 @@
 			?>
 					<h1>Login</h1>
 					<p>Thanks for logging in! Hello <code><?=$_SESSION['Username']?></code>.</p>
+					<table style="width:50%">
+						<tr>
+							<td>5</td>
+							<td>5</td>
+						</tr>
+					</table>
 					<form method="post" action="addPlayer.php" name="loginform" id="loginform">
 						<fieldset>
 							<label for="playerName">Player Name:</label><input type="text" name="playerName" id="playerName" /><br />
