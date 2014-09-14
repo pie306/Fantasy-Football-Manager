@@ -25,7 +25,7 @@
 						</tr>
 						<?php
 						for ($i = 1; $i < 17; $i++) {
-							echo "<tr><td>"
+							echo "<tr><td>";
 							$playerNum = "Player" . $i;
 							//$currentPlayer = mysqli_query($success, "SELECT '$playerNum' FROM players WHERE Username = '$username'");
 							echo $playerNum;
