@@ -29,7 +29,7 @@
 						$_SESSION['LoggedIn'] = 1;
 						echo "<h1>Success</h1>";
 						echo "<p>We are now redirecting you to your team.</p>";
-						echo "<meta http-equiv='refresh' content='=2;index.php' />";
+						echo "<meta http-equiv='refresh' content='2' />";
 					} else {
 						echo "<h1>Error</h1>";
 						echo "<p>Sorry, your account could not be found. Please <a href=\"index.php\">click here to try again</a>.</p>";
