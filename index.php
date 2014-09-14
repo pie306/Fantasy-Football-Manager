@@ -24,13 +24,13 @@
 							<td>ESPN Rank</td>
 						</tr>
 						<?php
-						
+						$username = $_SESSION['Username'];
+						$teamSearch = "SELECT * FROM players WHERE Username = '$username'";
+						//echo $teamSearch;
+						$result = mysqli_query($success, $teamSearch);
+						$team = mysqli_fetch_row($result);
 						for ($i = 1; $i < 17; $i++) {
-							$username = $_SESSION['Username'];
-							$teamSearch = "SELECT * FROM players WHERE Username = '$username'";
-							//echo $teamSearch;
-							$result = mysqli_query($success, $teamSearch);
-							$team = mysqli_fetch_row($result);
+							
 							//print_r($result);*/
 							echo "<tr><td>";
 							$currentPlayer = $team[$i];
