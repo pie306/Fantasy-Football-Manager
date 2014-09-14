@@ -36,7 +36,7 @@
 							$currentPlayer = $team[$i];
 							echo $currentPlayer;
 							echo "</td></tr>";
-						}*/
+						}
 						?>
 					</table>
 					<br>
