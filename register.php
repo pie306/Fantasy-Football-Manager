@@ -10,7 +10,7 @@
 		<div id="main">
 			<?php
 			if(!empty($_POST['username']) && !empty($_POST['password'])) {
-				$username = mysqli_real_escape_string($_POST['username']);
+				$username = $_POST['username'];
 				$password = md5(mysqli_real_escape_string($_POST['password']));     
 				$checkusername = mysqli_query("SELECT * FROM users WHERE Username = '$username'");      
 				if(mysqli_num_rows($checkusername) == 1) {
