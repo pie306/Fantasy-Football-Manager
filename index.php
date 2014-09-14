@@ -66,7 +66,7 @@
 					$username = mysqli_real_escape_string($success, $_POST['username']);
 					$password = md5(mysqli_real_escape_string($success, $_POST['password']));
 					$checklogin = mysqli_query($success, "SELECT * FROM users WHERE Username = '$username' AND Password = '$password'");
-					if(mysqli_num_rows($checklogin) == 1) {
+					if(mysqli_num_rows($checklogin) >= 1) {
 						$row = mysqli_fetch_array($checklogin);
 						$_SESSION['Username'] = $_POST['username'];
 						$_SESSION['LoggedIn'] = 1;
