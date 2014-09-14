@@ -26,8 +26,8 @@
 						<?php
 						$username = $_SESSION['Username'];
 						$teamSearch = "SELECT * FROM players WHERE Username = '$username'";
-						echo $teamSearch;
-						/*$result = mysqli_query($success, $teamSearch);
+						//echo $teamSearch;
+						$result = mysqli_query($success, $teamSearch);
 						$team = mysqli_fetch_row($result);
 						print_r($team);*/
 						/*for ($i = 1; $i < 17; $i++) {
