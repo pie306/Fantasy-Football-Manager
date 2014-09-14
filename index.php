@@ -29,6 +29,7 @@
 						//echo $teamSearch;
 						$result = mysqli_query($success, $teamSearch);
 						$team = mysqli_fetch_row($result);
+						echo ($_SESSION['i']);
 						for ($i = 1; $i < 17; $i++) {
 							
 							//print_r($result);*/

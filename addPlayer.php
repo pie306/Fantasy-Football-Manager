@@ -13,9 +13,10 @@
 			}
 		}
 		if ($i != 17) {
-			$playerNum = "Player" . $i;
-			mysqli_query($success, "SET SQL_SAFE_UPDATES=0");
-			mysqli_query($success, "UPDATE players SET $playerNum = '$playerName' WHERE Username = '$user'");
+			$_SESSION['i'] = $i;
+			//$playerNum = "Player" . $i;
+			//mysqli_query($success, "SET SQL_SAFE_UPDATES=0");
+			//mysqli_query($success, "UPDATE players SET $playerNum = '$playerName' WHERE Username = '$user'");
 			//mysqli_query($success, "INSERT INTO positions (Username, Player, Position) VALUES('$usern', '$playerName', '$position')");
 		}
 		header("Location: index.php");
