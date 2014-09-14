@@ -24,7 +24,7 @@
 							<td>ESPN Rank</td>
 						</tr>
 						<?php
-						for ($i = 1; $i < 17; i++) {
+						for ($i = 1; $i < 17; $i++) {
 							echo "<tr><td>"
 							$playerNum = "Player" . $i;
 							//$currentPlayer = mysqli_query($success, "SELECT '$playerNum' FROM players WHERE Username = '$username'");
