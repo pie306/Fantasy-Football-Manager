@@ -15,7 +15,7 @@
 					<p>Thanks for logging in! Hello <code><?=$_SESSION['Username']?></code>.</p>
 					<br>
 					<br>
-					<table style="width:50%">
+					<table style="width:100%">
 						<tr>
 							<td>Player</td>
 							<td>Positon</td>
