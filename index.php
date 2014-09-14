@@ -13,7 +13,11 @@
 			?>
 					<h1>Login</h1>
 					<p>Thanks for logging in! Hello <code><?=$_SESSION['Username']?></code>.</p>
-		  
+					<form method="post" action="logout.php" name="logoutform" id="logoutform">
+						<fieldset>
+							<input type="submit" name="logout" id="logout" value="Logout" />
+						</fieldset>
+					</form>
 			<?php
 				} elseif(!empty($_POST['username']) && !empty($_POST['password'])) {
 					$username = $_POST['username'];//mysqli_real_escape_string($_POST['username']);
