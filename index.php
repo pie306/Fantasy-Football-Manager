@@ -23,13 +23,22 @@
 							<td>FantasyPros Rank</td>
 							<td>ESPN Rank</td>
 						</tr>
+						<?php
+						for ($i = 1; $i < 17; i++) {
+							echo "<tr><td>"
+							$playerNum = "Player" . $i;
+							$currentPlayer = mysqli_query($success, "SELECT '$playerNum' FROM players WHERE Username = '$username'");
+							echo $currentPlayer;
+							echo "</tr></td>";
+						}
+						?>
 					</table>
 					<br>
 					<br>
 					<form method="post" action="addPlayer.php" name="loginform" id="loginform">
 						<fieldset>
 							<label for="playerName">Player Name:</label><input type="text" name="playerName" id="playerName" /><br />
-							<label for="position">Position (qb, rb, wr, te, k, d):</label><input type="text" name="position" id="position" /><br />
+							<label for="position">Position:</label><input type="text" name="position" id="position" /><br />
 							<input type="submit" name="add" id="add" value="Add" />
 						</fieldset>
 					</form>
