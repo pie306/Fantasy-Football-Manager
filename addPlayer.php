@@ -2,7 +2,7 @@
 		include "base.php";
 		$playerName = mysqli_real_escape_string($success, $_POST['playerName']);
 		$position = mysqli_real_escape_string($success, $_POST['position']);
-		$user = $_SESSION['Username'];
+		$user = mysqli_real_escape_string($success, $_SESSION['Username']);
 		mysqli_query($success, "INSERT INTO players (Player1) VALUES('$playerName') WHERE Username = '$user'");
 		/*$weekNumber = 2;
 		$position = $_POST['position'];
