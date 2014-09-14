@@ -13,12 +13,19 @@
 			?>
 					<h1>Login</h1>
 					<p>Thanks for logging in! Hello <code><?=$_SESSION['Username']?></code>.</p>
+					<br>
+					<br>
 					<table style="width:50%">
 						<tr>
-							<td>5</td>
-							<td>5</td>
+							<td>Player</td>
+							<td>Positon</td>
+							<td>NumberFire Rank</td>
+							<td>FantasyPros Rank</td>
+							<td>ESPN Rank</td>
 						</tr>
 					</table>
+					<br>
+					<br>
 					<form method="post" action="addPlayer.php" name="loginform" id="loginform">
 						<fieldset>
 							<label for="playerName">Player Name:</label><input type="text" name="playerName" id="playerName" /><br />
