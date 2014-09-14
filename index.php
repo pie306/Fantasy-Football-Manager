@@ -25,7 +25,7 @@
 						</tr>
 						<?php
 						$result = mysqli_query($success, "SELECT * FROM players WHERE Username = '$username'");
-						$team = mysql_fetch_row($result);
+						$team = mysqli_fetch_row($result);
 						for ($i = 1; $i < 17; $i++) {
 							echo "<tr><td>";
 							$currentPlayer = $team[$i];
