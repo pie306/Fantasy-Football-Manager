@@ -1,4 +1,5 @@
 <?php
+	session_set_cookie_params(3600,"/");
 	session_start();
 	 
 	$dbhost = "us-cdbr-iron-east-01.cleardb.net"; // this will ususally be 'localhost', but can sometimes differ
