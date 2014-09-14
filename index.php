@@ -40,7 +40,7 @@
 					*/
 					$query = "SELECT * FROM users WHERE Username = '$username' AND Password = '$password'";
 					echo ($query);
-					$checklogin = mysqli_query("SELECT * FROM users WHERE Username = '$username' AND Password = '$password'");
+					$checklogin = mysqli_query($success, "SELECT * FROM users WHERE Username = '$username' AND Password = '$password'");
 					if(mysqli_num_rows($checklogin) == 1) {
 						$row = mysqli_fetch_array($checklogin);
 						$_SESSION['Username'] = $username;
