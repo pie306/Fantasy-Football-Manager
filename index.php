@@ -11,7 +11,7 @@
 				include "base.php";
 				if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])) {
 			?>
-					<h1>Login</h1>
+					<h1>Your Account</h1>
 					<p>Thanks for logging in! Hello <code><?=$_SESSION['Username']?></code>.</p>
 					<br>
 					<br>
