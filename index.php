@@ -29,7 +29,7 @@
 							$playerNum = "Player" . $i;
 							//$currentPlayer = mysqli_query($success, "SELECT '$playerNum' FROM players WHERE Username = '$username'");
 							echo $playerNum;
-							echo "</td></tr>";*/
+							echo "</td></tr>";
 						}
 						?>
 					</table>
