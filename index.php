@@ -29,6 +29,7 @@
 						//echo $teamSearch;
 						$result = mysqli_query($success, $teamSearch);
 						$team = mysqli_fetch_row($result);
+						echo($team[1]);
 						//print_r($result);*/
 						/*for ($i = 1; $i < 17; $i++) {
 							echo "<tr><td>";
