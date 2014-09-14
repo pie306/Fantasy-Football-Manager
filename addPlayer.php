@@ -18,7 +18,7 @@
 			mysqli_query($success, "UPDATE players SET $playerNum = '$playerName' WHERE Username = '$user'");
 			mysqli_query($success, "INSERT INTO positions (Username, Player, Position) VALUES('$usern', '$playerName', '$position')");
 		}*/
-		header('index.php');
+		header("Location: index.php");
 		
 		/*$weekNumber = 2;
 		$position = $_POST['position'];
