@@ -48,7 +48,7 @@
 								echo "<td>";
 								
 								$weekNumber = 2;
-								$position = $positions;
+								$position = $positions[2];
 								$name = $currentPlayer;
 								if ($position == "qb") {
 									$espnURL = "http://espn.go.com/fantasy/football/story/_/page/14ranksWeek" . $weekNumber . "QB/fantasy-football-week-" . $weekNumber . "-fantasy-football-quarterback-rankings";
