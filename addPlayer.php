@@ -1,13 +1,13 @@
 <?php
 		include "base.php";
-		/*$playerName = mysqli_real_escape_string($success, $_POST['playerName']);
+		$playerName = mysqli_real_escape_string($success, $_POST['playerName']);
 		$position = mysqli_real_escape_string($success, $_POST['position']);
 		$user = mysqli_real_escape_string($success, $_SESSION['Username']);
 		$teamSearch = "SELECT * FROM players WHERE Username = '$user'";
 		//echo $teamSearch;
 		$result = mysqli_query($success, $teamSearch);
 		$team = mysqli_fetch_row($result);
-		for ($i = 1; $i < 17; $i++) {
+		/*for ($i = 1; $i < 17; $i++) {
 			if ($i == NULL) {
 				break;
 			}
