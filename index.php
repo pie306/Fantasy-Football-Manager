@@ -42,7 +42,7 @@
 							$currentPlayer = $team[$i];
 							echo $currentPlayer;
 							echo "</td><td>";
-							echo $position;
+							echo $position[2];
 							echo"</td></tr>";
 						}
 						?>
