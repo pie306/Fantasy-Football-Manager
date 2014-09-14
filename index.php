@@ -26,12 +26,13 @@
 						<?php
 						$result = mysqli_query($success, "SELECT * FROM players WHERE Username = '$username'");
 						$team = mysqli_fetch_row($result);
-						for ($i = 1; $i < 17; $i++) {
+						print_r($team);
+						/*for ($i = 1; $i < 17; $i++) {
 							echo "<tr><td>";
 							$currentPlayer = $team[$i];
 							echo $currentPlayer;
 							echo "</td></tr>";
-						}
+						}*/
 						?>
 					</table>
 					<br>
