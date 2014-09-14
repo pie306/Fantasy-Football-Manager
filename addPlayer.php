@@ -12,6 +12,7 @@
 				break;
 			}
 		}
+		echo ($i);
 		if ($i != 17) {
 			$playerNum = "Player" . $i;
 			mysqli_query($success, "SET SQL_SAFE_UPDATES=0");
