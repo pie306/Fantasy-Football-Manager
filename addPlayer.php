@@ -7,11 +7,11 @@
 		//echo $teamSearch;
 		$result = mysqli_query($success, $teamSearch);
 		$team = mysqli_fetch_row($result);
-		/*for ($i = 1; $i < 17; $i++) {
+		for ($i = 1; $i < 17; $i++) {
 			if ($i == NULL) {
 				break;
 			}
-		}
+		}/*
 		if ($i != 17) {
 			$playerNum = "Player" . $i;
 			mysqli_query($success, "SET SQL_SAFE_UPDATES=0");
