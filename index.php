@@ -24,7 +24,7 @@
 							<td>ESPN Rank</td>
 						</tr>
 						<?php
-						$teamSearch = "SELECT * FROM players WHERE Username = '$username'";
+						$teamSearch = "SELECT * FROM players WHERE Username = '$_SESSION['Username']'";
 						echo $teamSearch;
 						$result = mysqli_query($success, $teamSearch);
 						$team = mysqli_fetch_row($result);
