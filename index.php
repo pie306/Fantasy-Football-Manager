@@ -29,14 +29,21 @@
 						//echo $teamSearch;
 						$result = mysqli_query($success, $teamSearch);
 						$team = mysqli_fetch_row($result);
+						
 						echo ($_SESSION['i']);
 						for ($i = 1; $i < 17; $i++) {
-							
+							$currentPlayer = $team[$i];
+							$positionSearch = "SELECT * FROM positions WHERE Username = '$username' AND Player = '$currentPlayer'";
+							//echo $teamSearch;
+							$positionResult = mysqli_query($success, $positionSearch);
+							$position = mysqli_fetch_row($positionResult);
 							//print_r($result);*/
 							echo "<tr><td>";
 							$currentPlayer = $team[$i];
 							echo $currentPlayer;
-							echo "</td></tr>";
+							echo "</td><td>";
+							echo $position;
+							echo"</td></tr>";
 						}
 						?>
 					</table>
