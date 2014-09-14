@@ -8,7 +8,7 @@
 		$result = mysqli_query($success, $teamSearch);
 		$team = mysqli_fetch_row($result);
 		for ($i = 1; $i < 17; $i++) {
-			if ($i == NULL) {
+			if ($team[$i] == NULL) {
 				echo '<script language="javascript">';
 				echo 'alert("message successfully sent")';
 				echo '</script>';
