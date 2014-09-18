@@ -29,7 +29,7 @@
 						//echo $teamSearch;
 						$result = mysqli_query($success, $teamSearch);
 						$team = mysqli_fetch_row($result);
-						
+						$weekNumber = 3;
 						echo ($_SESSION['i']);
 						for ($i = 1; $i < 17; $i++) {
 							$currentPlayer = $team[$i];
@@ -45,12 +45,12 @@
 							echo $positions[2];
 							echo "</td>";
 							$playerInjury = false;
-							$injury_URL = "http://www.fantasyfootballnerd.com/service/injuries/xml/2iacgnksv3vr/2/";
+							$injury_URL = "http://www.fantasyfootballnerd.com/service/injuries/xml/2iacgnksv3vr/ . $weekNumber ./";
 							$injury_data = simplexml_load_file($injury_URL);
 							foreach ($injury_data->Teams->Team as $currentTeam) :
 								$teamName = $currentTeam['code'];
 								foreach ($currentTeam->Player as $player) :
-									if ($player['playerName'] == $currentPlayer && $player['gameStatus'] == "Out") {
+									if ($player['playerName'] == $currentPlayer && $player['position'] == $positions[2] && $player['gameStatus'] == "Out") {
 										$playerInjuryDetails = $player['injury'];
 										$playerNotes = $player['notes'];
 										$playerInjury = true;
@@ -59,8 +59,6 @@
 							endforeach;
 							if ($currentPlayer != NULL && $playerInjury == false) {
 								echo "<td>";
-								echo $playerInjury;
-								$weekNumber = 3;
 								$position = $positions[2];
 								$name = $currentPlayer;
 								if ($position == "qb") {
