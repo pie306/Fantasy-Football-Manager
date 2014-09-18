@@ -59,7 +59,7 @@
 							endforeach;
 							if ($currentPlayer != NULL && $playerInjury == false) {
 								echo "<td>";
-								
+								echo $playerInjury;
 								$weekNumber = 3;
 								$position = $positions[2];
 								$name = $currentPlayer;
