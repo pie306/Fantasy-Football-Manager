@@ -50,8 +50,10 @@
 							foreach ($injury_data->Teams->Team as $currentTeam) :
 								$teamName = $currentTeam['code'];
 								foreach ($currentTeam->Player as $player) :
-									if ($player['playerName'] == $currentPlayer && $player['position'] == $positions[2] && $player['gameStatus'] == "Out") {
+									if ($player['playerName'] == $currentPlayer && strcasecmp($player['position'], $positions[2]) == 0 && ($player['gameStatus'] == "Out" 
+										|| $player['gameStatus'] == 'Questionable') {
 										$playerInjuryDetails = $player['injury'];
+										$playerStatus = $player['gameStatus'];
 										$playerNotes = $player['notes'];
 										$playerInjury = true;
 									}
@@ -134,7 +136,7 @@
 								echo($count);
 								echo"</td>";
 							} else if ($playerInjury == true){
-								echo "<td>$playerInjuryDetail</td><td>$playerNotes</td>";
+								echo "<td>$playerStatus</td><td>$playerInjuryDetail</td><td>$playerNotes</td>";
 								
 							}
 							echo "</tr>";
