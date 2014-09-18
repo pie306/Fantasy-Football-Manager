@@ -51,7 +51,7 @@
 								$teamName = $currentTeam['code'];
 								foreach ($currentTeam->Player as $player) :
 									if ($player['playerName'] == $currentPlayer && strcasecmp($player['position'], $positions[2]) == 0 && ($player['gameStatus'] == "Out" 
-										|| $player['gameStatus'] == 'Questionable') {
+										|| $player['gameStatus'] == 'Questionable')) {
 										$playerInjuryDetails = $player['injury'];
 										$playerStatus = $player['gameStatus'];
 										$playerNotes = $player['notes'];
