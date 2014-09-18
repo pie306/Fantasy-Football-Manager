@@ -44,10 +44,23 @@
 							echo "</td><td>";
 							echo $positions[2];
 							echo "</td>";
-							if ($currentPlayer != NULL) {
+							$playerInjury = false;
+							$injury_URL = "http://www.fantasyfootballnerd.com/service/injuries/xml/2iacgnksv3vr/2/";
+							$injury_data = simplexml_load_file($injury_URL);
+							foreach ($injury_data->Teams->Team as $currentTeam) :
+								$teamName = $currentTeam['code'];
+								foreach ($currentTeam->Player as $player) :
+									if ($player['playerName'] == $currentPlayer && $player['gameStatus'] == "Out") {
+										$playerInjuryDetails = $player['injury'];
+										$playerNotes = $player['notes'];
+										$playerInjury = true;
+									}
+								endforeach;
+							endforeach;
+							if ($currentPlayer != NULL && $playerInjury == false) {
 								echo "<td>";
 								
-								$weekNumber = 2;
+								$weekNumber = 3;
 								$position = $positions[2];
 								$name = $currentPlayer;
 								if ($position == "qb") {
@@ -63,24 +76,7 @@
 								} else if ($position == "d") {
 									$espnURL = "http://espn.go.com/fantasy/football/story/_/page/14ranksWeek" . $weekNumber . "DST/fantasy-football-week-" . $weekNumber . "-fantasy-football-defense-special-teams-rankings";
 								}
-								/*$injury_URL = "http://www.fantasyfootballnerd.com/service/injuries/xml/2iacgnksv3vr/2/";
-								$injury_data = simplexml_load_file($injury_URL);
-								echo "<ol>";
-								foreach ($injury_data->Teams->Team as $currentTeam) :
-									$teamName = $currentTeam['code'];
-									echo "<li>$teamName<ul>";
-									foreach ($currentTeam->Player as $player) :
-										if ($player['gameStatus'] == "Out") {
-											$playerName = $player['playerName'];
-											$playerPosition = $player['position'];
-											$playerInjury = $player['injury'];
-											$playerNotes = $player['notes'];
-											echo "<li>$playerName ($playerPosition), $playerInjury, $playerNotes</li>";
-										}
-									endforeach;
-									echo "</ul></li>";
-								endforeach;
-								echo "</ol>";*/
+								
 								$originalURL = "http://www.numberfire.com/nfl/fantasy/fantasy-football-projections/" . $position;
 								$url = curl_init($originalURL);
 								curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
@@ -139,6 +135,9 @@
 								}
 								echo($count);
 								echo"</td>";
+							} else if ($playerInjury == true){
+								echo "<td>$playerInjuryDetail</td><td>$playerNotes</td>";
+								
 							}
 							echo "</tr>";
 						}
