@@ -136,7 +136,7 @@
 								echo($count);
 								echo"</td>";
 							} else if ($playerInjury == true){
-								echo "<td>$playerStatus</td><td>$playerInjuryDetail</td><td>$playerNotes</td>";
+								echo "<td>$playerStatus</td><td>$playerInjuryDetails</td><td>$playerNotes</td>";
 								
 							}
 							echo "</tr>";
@@ -148,7 +148,14 @@
 					<form method="post" action="addPlayer.php" name="loginform" id="loginform">
 						<fieldset>
 							<label for="playerName">Player Name:</label><input type="text" name="playerName" id="playerName" /><br />
-							<label for="position">Position:</label><input type="text" name="position" id="position" /><br />
+							<select>
+								<option value="qb">Quarterback</option>
+								<option value="rb">Runningback</option>
+								<option value="wr">Wide Receiver</option>
+								<option value="te">Tight End</option>
+								<option value="d">Defense</option>
+								<option value="k">Kicker</option>
+							</select><br />
 							<input type="submit" name="add" id="add" value="Add" />
 						</fieldset>
 					</form>
