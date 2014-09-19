@@ -145,7 +145,7 @@
 					</table>
 					<br>
 					<br>
-					<form method="post" action="addPlayer.php" name="loginform" id="loginform">
+					<form method="post" action="addPlayer.php" name="deletePlayer" id="deletePlayer">
 						<fieldset>
 							<label for="playerName">Player Name:</label><input type="text" name="playerName" id="playerName" /><br />
 							<label for="position">Position:</label>
@@ -161,11 +161,17 @@
 							<input type="submit" name="add" id="add" value="Add" />
 						</fieldset>
 					</form>
+					<form method="post" action="deletePlayer.php" name="deletePlayer" id="deletePlayer">
+						<fieldset>
+							<input type="submit" name="deletePlayer" id="deletePlayer" value="deletePlayer" />
+						</fieldset>
+					</form>
 					<form method="post" action="logout.php" name="logoutform" id="logoutform">
 						<fieldset>
 							<input type="submit" name="logout" id="logout" value="Logout" />
 						</fieldset>
 					</form>
+					
 			<?php
 				} elseif(!empty($_POST['username']) && !empty($_POST['password'])) {
 					$username = mysqli_real_escape_string($success, $_POST['username']);
