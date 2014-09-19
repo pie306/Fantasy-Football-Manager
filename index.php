@@ -148,7 +148,9 @@
 					<form method="post" action="addPlayer.php" name="loginform" id="loginform">
 						<fieldset>
 							<label for="playerName">Player Name:</label><input type="text" name="playerName" id="playerName" /><br />
-							<select>
+							<label for="position">Position:</label>
+							<select name = "position" id="position">
+								<option value="na">Position</option>
 								<option value="qb">Quarterback</option>
 								<option value="rb">Runningback</option>
 								<option value="wr">Wide Receiver</option>
