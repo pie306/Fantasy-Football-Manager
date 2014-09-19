@@ -149,7 +149,7 @@
 						<fieldset>
 							<label for="playerName">Player Name:</label><input type="text" name="playerName" id="playerName" /><br />
 							<label for="position">Position:</label>
-							<select name = "position" id="position">
+							<select id="position" name="position">
 								<option value="na">Position</option>
 								<option value="qb">Quarterback</option>
 								<option value="rb">Runningback</option>
