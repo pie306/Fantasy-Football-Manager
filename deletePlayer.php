@@ -1,7 +1,7 @@
 <?php
 		include "base.php";
-		$playerName = mysqli_real_escape_string($success, "Montee Ball");//$_POST['playerName']);
-		$position = mysqli_real_escape_string($success, "rb");//$_POST['position']);
+		$playerName = mysqli_real_escape_string($success, $_POST['playerName']);
+		$position = mysqli_real_escape_string($success, $_POST['position']);
 		$user = mysqli_real_escape_string($success, $_SESSION['Username']);
 		$teamSearch = "SELECT * FROM players WHERE Username = '$user'";
 		//echo $teamSearch;

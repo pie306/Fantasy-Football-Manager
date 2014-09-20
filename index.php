@@ -124,7 +124,7 @@
 								$started = false;
 								$count = 0;
 								foreach ($titles as $title) {
-									if (preg_match("/Week 2$/", $title->textContent)) {
+									if (preg_match("/Week 3$/", $title->textContent)) {
 										$started = true;
 									} else if ($started == true) {
 										$count++;
